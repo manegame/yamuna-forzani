@@ -15,11 +15,20 @@
       $('body').on('mousemove', instaShow);
 
       $('.thumb').on('mouseover', function(){
-        $(this).find('.title').hide();
+        $(this).find('.title').fadeIn(500);
       }).on('mouseleave', function(){
-        $('.title').fadeIn(500);
+        $('.title').hide();
       });
 
+      // $(window).on('scroll', function() {
+      //   if ( $(window).scrollTop() > $('main').scrollHeight ) {
+      //       $(window).scrollTop(1);
+      //   } else if ( $(window).scrollTop() == 0 ) {
+      //       $(window).scrollTop($('main').scrollHeight);
+      //   }
+      // });
+
     });
+
 
 }());

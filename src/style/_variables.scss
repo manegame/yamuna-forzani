@@ -8,6 +8,12 @@ $nimbus-size: 30px;
 $hobo-size: 24px;
 $line-height: 30px;
 
+$margin-m: 30px;
+
+$nimbus-size-m: 70px;
+$hobo-size-m: 56px;
+$line-height-m: 60px;
+
 $margin-l: 45px;
 
 $nimbus-size-l: 100px;
@@ -27,7 +33,25 @@ $display-nimbus: "NimbusSansDOT-BlacExte";
 //
 
 $background-color: #ffcdf1;
+$background-color-transparent: rgba(#ffcdf1, 0.5);
 $main-color: #000;
+
+
+//
+// Effects
+//
+
+$fab-inverse:   0px 0px 20px rgba(255, 255, 255, 0.5),
+                -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+                -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+
+$fab:           0px 0px 20px rgba(255, 255, 255, 0.5),
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
 
 //
 // Space

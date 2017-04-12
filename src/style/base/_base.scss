@@ -35,16 +35,30 @@ p {
   font-family: $display-nimbus;
   font-size: $nimbus-size;
   line-height: $line-height;
+  &.m {
+    font-size: $nimbus-size-m;
+    line-height: $line-height-m;
+  }
   &.l {
     font-size: $nimbus-size-l;
     line-height: $line-height-l;
   }
 }
 
+h1 {
+  font-size: $hobo-size-m;
+  line-height: $line-height-m;
+  text-shadow: $fab-inverse;
+}
+
 .hobo {
   font-family: $display-hobo;
   font-size: $hobo-size;
   line-height: $line-height;
+    &.m {
+      font-size: $hobo-size-m;
+      line-height: $line-height-m;
+    }
     &.l {
       font-size: $hobo-size-l;
       line-height: $line-height-l;

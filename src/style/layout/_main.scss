@@ -8,12 +8,34 @@
   text-align: center;
   z-index: 1;
   margin-top: $margin;
+  #yamuna {
+    text-shadow: $fab-inverse;
+  }
+}
+
+#instagram-link {
+  text-shadow: $fab;
 }
 
 .main {
   position: absolute;
   width: 100vw;
   .thumb {
+    a {
+      position: absolute;
+      top: 0;
+    }
+    &.quote {
+      padding: $margin-m 5%;
+      h1 {
+        width: 100%;
+        padding: 3% 5%;
+        // margin-left: 5%;
+        color: $background-color;
+        background-color: $main-color;
+        border-radius: 20px;
+      }
+    }
     &.left {
       float: left;
     }
@@ -38,8 +60,11 @@
         left: 0;
         text-align: center;
         h3 {
-          display: none;
-          @include center-vertical;
+          // display: none;
+          color: $background-color;
+          text-shadow: $fab;
+          width: 90%;
+          @include center;
         }
       }
     }
