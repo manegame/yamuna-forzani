@@ -9,24 +9,21 @@
 
     require('./_shop.js');
     require('./_insta.js');
+    require('./_letters.js');
 
     $(function () {
 
       $('body').on('mousemove', instaShow);
+
+      var els = ['p', 'h1', 'h2', 'h3'];
+
+      $(document).on('ready', setLetters(els));
 
       $('.thumb').on('mouseover', function(){
         $(this).find('.title').fadeIn(500);
       }).on('mouseleave', function(){
         $('.title').hide();
       });
-
-      // $(window).on('scroll', function() {
-      //   if ( $(window).scrollTop() > $('main').scrollHeight ) {
-      //       $(window).scrollTop(1);
-      //   } else if ( $(window).scrollTop() == 0 ) {
-      //       $(window).scrollTop($('main').scrollHeight);
-      //   }
-      // });
 
     });
 
