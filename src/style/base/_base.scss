@@ -1,0 +1,52 @@
+* {
+  &::selection {
+    background: $main-color;
+    color: $background-color;
+  }
+}
+
+body {
+  background: $background-color;
+  color: $main-color;
+  font-size: $nimbus-size;
+  line-height: $line-height;
+  font-family: $display-nimbus;
+}
+
+a {
+  color: $main-color;
+  text-decoration: none;
+  &:visited {
+    color: $main-color;
+  }
+  &:hover {
+    color: $main-color;
+  }
+  &:active {
+    color: $main-color;
+  }
+}
+
+p {
+  font-family: $display-nimbus;
+}
+
+.nimbus {
+  font-family: $display-nimbus;
+  font-size: $nimbus-size;
+  line-height: $line-height;
+  &.l {
+    font-size: $nimbus-size-l;
+    line-height: $line-height-l;
+  }
+}
+
+.hobo {
+  font-family: $display-hobo;
+  font-size: $hobo-size;
+  line-height: $line-height;
+    &.l {
+      font-size: $hobo-size-l;
+      line-height: $line-height-l;
+    }
+}

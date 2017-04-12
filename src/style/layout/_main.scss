@@ -1,0 +1,47 @@
+* {
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+  z-index: 1;
+  margin-top: $margin;
+}
+
+.main {
+  position: absolute;
+  width: 100vw;
+  .thumb {
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
+    }
+    &.left, &.right {
+      position: relative;
+      width: 50vw;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .title {
+        mix-blend-mode: luminosity;
+        background-color: $background-color;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-align: center;
+        h3 {
+          display: none;
+          @include center-vertical;
+        }
+      }
+    }
+  }
+}

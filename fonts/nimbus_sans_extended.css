@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "NimbusSansDOT-BlacExte";
+    src: url("nimbus_sans_extended.eot");
+    src: url("nimbus_sans_extended.eot?#iefix") format("embedded-opentype"),
+         url("nimbus_sans_extended.woff2") format("woff2"),
+         url("nimbus_sans_extended.woff") format("woff"),
+         url("nimbus_sans_extended.ttf") format("ttf"),
+         url("nimbus_sans_extended.svg#NimbusSansDOT-BlacExte") format("svg");
+    font-style: normal;
+    font-weight: 900;
+}

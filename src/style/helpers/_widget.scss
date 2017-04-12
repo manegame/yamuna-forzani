@@ -1,0 +1,64 @@
+.pink {
+	background-color: #ffcdf1;
+	mix-blend-mode: luminosity;
+}
+
+.mint {
+	background-color: #a0ead7;
+	mix-blend-mode: luminosity;
+}
+
+#instagram {
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	display: none;
+	cursor: none;
+}
+
+#widget {
+	padding: 10px 10px 5px 10px;
+    width: 30%;
+    left: 50%;
+    margin-left: -15%;
+    top: 50%;
+    margin-top: -15%;
+    height: auto;
+    position: fixed;
+    display: none;
+	z-index: 9999999;
+	pointer-events: none;
+}
+
+#insta-text {
+	display: none;
+	position: absolute;
+	margin-top: -20px;
+	color: white;
+	z-index: 999999999999999999;
+	cursor: none;
+}
+
+#widget, .mint-border {
+
+	background-color: #a0ead7;
+	-webkit-box-shadow: 0px 0px 120px 6px #a0ead7;
+	-moz-box-shadow: 0px 0px 120px 6px #a0ead7;
+	box-shadow: 0px 0px 120px 6px #a0ead7;
+
+	-webkit-animation-name: rotate;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 30s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

@@ -1,0 +1,48 @@
+//
+// Typography
+//
+
+$margin: 15px;
+
+$nimbus-size: 30px;
+$hobo-size: 24px;
+$line-height: 30px;
+
+$margin-l: 45px;
+
+$nimbus-size-l: 100px;
+$hobo-size-l: 80px;
+$line-height-l: 90px;
+
+$system-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$serif-stack: 'times new roman', times, georgia, serif;
+$sans-serif-stack: helvetica, arial, sans-serif;
+$display-hobo: "HoboStd";
+$display-nimbus: "NimbusSansDOT-BlacExte";
+
+
+
+//
+// Colors
+//
+
+$background-color: #ffcdf1;
+$main-color: #000;
+
+//
+// Space
+//
+
+// ***
+
+
+//
+//  Breakpoints
+//
+
+$breakpoints: (
+  'small': (max-width: 700px),
+  'medium': (max-width: 1000px),
+  'large': (max-width: 1600px),
+  'short': (max-height: 600px),
+);
