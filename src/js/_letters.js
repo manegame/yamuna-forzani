@@ -1,33 +1,42 @@
-setLetters = function(els){
+function returnLetters (el, letters, size) {
+  console.log(el, letters, size);
+  for( var i = 0; i < letters.length; i ++ ) {
+    el.append('<span class="'+ size[Math.floor(Math.random() * 2)] +'">'+letters[i]+'</span>');
+  }
+}
+
+function splitLetters (el) {
 
   var small = ["hobo", "nimbus"];
   var medium = ["hobo m", "nimbus m"];
   var large = ["hobo l", "nimbus l"];
 
-  console.log(els);
+  // Save letters, split characters
+  var letters = el.text().split("");
+  // to be able to check
+  var elName = el[0].localName;
 
-  for(i = 0; i < els.length; i ++) {
+  el.empty();
 
-    // Save letters, split characters
-    var letters = $(els[i]).text().split("");
-    $(els[i]).empty();
+  if (elName === 'h3') { returnLetters(el, letters, medium) }
+  if (elName === 'h1') { returnLetters(el, letters, large) }
 
+}
 
-    if (els[i] === 'p') {
-      $(letters).each(function(index){
-        $(els[i]).append('<span class="'+ small[Math.floor(Math.random() * 2)] +'">'+letters[index]+'</span>');
-      });
-    } else if (els[i] === 'h1') {
-      $(letters).each(function(index){
-        $(els[i]).append('<span class="'+ large[Math.floor(Math.random() * 2)] +'">'+letters[index]+'</span>');
-      });
-    } else if (els[i] === 'h3') {
-      $(letters).each(function(index){
-        $(els[i]).append('<span class="'+ large[Math.floor(Math.random() * 2)] +'">'+letters[index]+'</span>');
-      });
-    }
+setLetters = function(els){
 
-  }
+  $(els).each(function(index) {
+
+    $(els[index]).each( function () {
+      if($(this).hasClass('exception')) {
+        return;
+      } else {
+        splitLetters( $(this) );
+      }
+
+    });
+
+  });
 
 }
 

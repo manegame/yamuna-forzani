@@ -25,17 +25,6 @@
       position: absolute;
       top: 0;
     }
-    &.quote {
-      padding: $margin-m 5%;
-      h1 {
-        width: 100%;
-        padding: 3% 5%;
-        // margin-left: 5%;
-        color: $background-color;
-        background-color: $main-color;
-        border-radius: 20px;
-      }
-    }
     &.left {
       float: left;
     }
@@ -46,6 +35,21 @@
       position: relative;
       width: 50vw;
       overflow: hidden;
+      &.quote {
+        padding: $margin-m 5%;
+        text-align: center;
+        @include screen-size('small') {
+          width: 100vw;
+        }
+        h3 {
+          width: 100%;
+          padding: 3% 5%;
+          // margin-left: 5%;
+          color: $background-color;
+          background-color: $main-color;
+          border-radius: 20px;
+        }
+      }
       img {
         width: 100%;
         height: auto;

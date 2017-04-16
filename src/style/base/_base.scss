@@ -31,6 +31,12 @@ p {
   font-family: $display-nimbus;
 }
 
+h1 {
+  font-size: $hobo-size-m;
+  line-height: $line-height-m;
+  text-shadow: $fab-inverse;
+}
+
 .nimbus {
   font-family: $display-nimbus;
   font-size: $nimbus-size;
@@ -43,12 +49,16 @@ p {
     font-size: $nimbus-size-l;
     line-height: $line-height-l;
   }
-}
-
-h1 {
-  font-size: $hobo-size-m;
-  line-height: $line-height-m;
-  text-shadow: $fab-inverse;
+  @include screen-size('small') {
+    &.m {
+      font-size: $nimbus-size;
+      line-height: $line-height;
+    }
+    &.l {
+      font-size: $nimbus-size-m;
+      line-height: $line-height-m;
+    }
+  }
 }
 
 .hobo {
@@ -62,5 +72,15 @@ h1 {
     &.l {
       font-size: $hobo-size-l;
       line-height: $line-height-l;
+    }
+    @include screen-size('small') {
+      &.m {
+        font-size: $hobo-size;
+        line-height: $line-height;
+      }
+      &.l {
+        font-size: $hobo-size-m;
+        line-height: $line-height-m;
+      }
     }
 }
