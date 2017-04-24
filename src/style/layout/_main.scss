@@ -1,69 +1,183 @@
 * {
   overflow-x: hidden;
+  @include hide-scroll;
 }
 
 .header {
   width: 100vw;
   position: fixed;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
   margin-top: $margin;
   #yamuna {
     text-shadow: $fab-inverse;
   }
 }
 
-#instagram-link {
-  text-shadow: $fab;
-}
-
 .main {
   position: absolute;
   width: 100vw;
-  .thumb {
-    a {
-      position: absolute;
-      top: 0;
+  margin: $margin * 6 0 0 0;
+  @include screen-size('small') {
+    margin: $margin * 9 0;
+  }
+  // nav bar
+  .navbar {
+    width: 100vw;
+    height: $margin * 3;
+    padding: $margin 0 0 0;
+    &.bumper {
+      height: $margin * 6;
+      @include screen-size('small') {
+        height: 0px;
+        padding: 0;
+      }
     }
+    @include screen-size('small') {
+      height: $margin * 10;
+    }
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      @include screen-size('small') {
+        display: inline-block;
+      }
+      li {
+        flex-grow: 1;
+        color: white;
+        text-shadow: $fab;
+        @include screen-size('small') {
+          margin: 0 0 $line-height / 2  0;
+        }
+      }
+    }
+  }
+  // thumbs
+  .thumb {
+    // a {
+    //   position: absolute;
+    //   top: 0;
+    // }
     &.left {
       float: left;
     }
     &.right {
       float: right;
     }
-    &.left, &.right {
+    &.wide {
+      width: 100vw !important;
+      float: left;
+    }
+    &.left, &.right, &.wide {
       position: relative;
-      width: 50vw;
       overflow: hidden;
-      &.quote {
-        padding: $margin-m 5%;
-        text-align: center;
+      width: 50vw;
+      height: 75vw;
+      // ABOUT
+      &.flow {
+        height: auto;
+        overflow: visible;
+      }
+      &.running {
+        width: 70vw;
+        padding: 15px 60px 15px 30px;
+        @include screen-size('medium') {
+          width: 100vw;
+          padding: 10px 40px 10px 20px;
+        }
+      }
+      &.video {
+        padding: 15px 30px;
+      }
+      &.side {
+        width: 30vw;
+        @include screen-size('medium') {
+          width: 100vw;
+          &:nth-child(odd) {
+            width: 90vw;
+          }
+        }
+      }
+      &.article {
+        img.one, img.two {
+          position: absolute;
+          top: $margin;
+        }
+        img.one {
+          margin: 0;
+          z-index: 1;
+          box-shadow: $fab;
+          &.active {
+            box-shadow: $fab-inverse;
+          }
+        }
+        img.two {
+          cursor: pointer;
+          z-index: 1;
+          left: $margin * 2;
+          width: 12vw;
+          box-shadow: $fab;
+          @include center-vertical;
+          &.active {
+            box-shadow: $fab-inverse;
+          }
+          @include screen-size('small') {
+            left: $margin;
+            width: 30vw;
+          }
+        }
         @include screen-size('small') {
+            width: 100vw;
+            height: 150vw;
+        }
+      }
+      &.sales {
+        margin: 0 0 $margin * 9 0;
+        padding: $margin $margin * 2;
+        height: auto;
+        @include screen-size('small') {
+          padding: $margin $margin;
+          margin: 0 0 $margin 0;
           width: 100vw;
         }
-        h3 {
+      }
+      &.quote {
+        padding: $margin $margin * 2;
+        text-align: center;
+        height: auto;
+        @include screen-size('small') {
+          padding: $margin $margin;
+          width: 100vw;
+        }
+        h1, h2, h3, h5 {
           width: 100%;
           padding: 3% 5%;
-          // margin-left: 5%;
           color: $background-color;
           background-color: $main-color;
+          box-shadow: $fab-inverse;
           border-radius: 20px;
         }
       }
-      img {
+      & > img {
         width: 100%;
         height: auto;
+        &:not('.article > img') {
+          @include center-vertical;
+        }
       }
-      .title {
-        mix-blend-mode: luminosity;
-        background-color: $background-color;
+      .title > a, .title {
+        // mix-blend-mode: luminosity;
+        // background-color: $background-color;
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         text-align: center;
-        h3 {
+        h3, h5 {
           // display: none;
           color: $background-color;
           text-shadow: $fab;
@@ -72,5 +186,64 @@
         }
       }
     }
+  }
+}
+
+
+form {
+  // background-color: white;
+  box-shadow: $fab;
+  border-radius: 20px;
+  display: block;
+  padding: $margin 0;
+  img {
+    width: 0px;
+    height: 0px;
+  }
+  table {
+    width: 100%;
+    display: block;
+    vertical-align: text-bottom;
+  }
+  td {
+    &:nth-child(odd) {
+      padding: 0 $margin;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: $display-nimbus;
+      font-size: $nimbus-size-s;
+      line-height: $line-height-s;
+      height: $line-height-s;
+      @include screen-size('small') {
+        font-size: $nimbus-size-s;
+        line-height: $line-height-s;
+      }
+    }
+    &:nth-child(even) {
+      text-align: right;
+    }
+  }
+  select {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+    font-size: $nimbus-size-s;
+    height: $line-height-s;
+    line-height: $line-height;
+    display: inline-block;
+    &:last-child {
+      margin-bottom: $margin;
+    }
+  }
+  tr {
+    padding: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+  input {
+    // position: absolute;
+    margin-left: $margin;
+    bottom: $margin / 2;
   }
 }

@@ -1,0 +1,26 @@
+#enter {
+  width: $margin-l;
+  height: $margin-l;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 5;
+  box-shadow: $fab-inverse;
+  background-color: $main-color;
+  cursor: move;
+  &.initial {
+    top: $margin * 10;
+    left: calc(#{50vw} - 22px);
+  }
+  #click {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  &:hover {
+    background-color: $mint;
+  }
+  &.pink {
+    background-color: $background-color;
+  }
+  transition: all .3s linear;
+}

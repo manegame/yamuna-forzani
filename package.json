@@ -42,6 +42,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "image-loaded": "^0.0.2",
     "imagesloaded": "^4.1.1",
+    "jquery-ui-touch-punch": "^0.2.3",
     "socket.io-client": "^1.7.1",
     "standard": "^7.1.1",
     "vinyl-buffer": "^1.0.0",

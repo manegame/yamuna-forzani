@@ -1,5 +1,5 @@
 function returnLetters (el, letters, size) {
-  console.log(el, letters, size);
+  // console.log(el, letters, size);
   for( var i = 0; i < letters.length; i ++ ) {
     el.append('<span class="'+ size[Math.floor(Math.random() * 2)] +'">'+letters[i]+'</span>');
   }
@@ -18,6 +18,7 @@ function splitLetters (el) {
 
   el.empty();
 
+  if (elName === 'h5') { returnLetters(el, letters, small) }
   if (elName === 'h3') { returnLetters(el, letters, medium) }
   if (elName === 'h1') { returnLetters(el, letters, large) }
 

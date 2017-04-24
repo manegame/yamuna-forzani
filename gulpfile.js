@@ -49,8 +49,12 @@ gulp.task('sass', function () {
 // Browser Sync
 gulp.task('browser-sync', function () {
   browserSync.init({
-    proxy: 'localhost:8888',
-    open: false
+    open: 'local',
+    proxy: {
+      target: 'http://yamuna-forzani.manus:8888'
+    },
+    port: 8080
+
   });
 });
 
@@ -102,7 +106,7 @@ gulp.task('watch', function () {
   gulp.watch('src/js/*.js', ['scripts']);
 
   // Watch .html files
-  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('**/*.html', browserSync.reload);
 
   // Watch .scss files
   gulp.watch('src/style/**/*.scss', ['sass']);

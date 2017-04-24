@@ -14,27 +14,105 @@ body {
 }
 
 a {
-  color: $main-color;
+  color: white;
+  word-break: break-all;
+  &.black {
+    color: black;
+  }
   text-decoration: none;
   &:visited {
-    color: $main-color;
+    color: white !important;
   }
   &:hover {
-    color: $main-color;
+    color: white;
+    text-shadow: $fab-inverse;
   }
   &:active {
+    color: white;
+  }
+  h1 {
     color: $main-color;
+    text-decoration: none;
+    &:visited {
+      color: $main-color;
+    }
+    &:hover {
+      color: $main-color;
+    }
+    &:active {
+      color: $main-color;
+    }
   }
 }
 
 p {
   font-family: $display-nimbus;
+  font-size: $nimbus-size;
+  line-height: $line-height;
+  @include screen-size ('small') {
+    font-size: $nimbus-size-s;
+    line-height: $line-height-s;
+  }
+}
+
+ul {
+  font-family: $display-nimbus;
+  li, li > a {
+    font-size: $nimbus-size;
+    line-height: $line-height;
+    &:not('.navbar > li'){
+      @include screen-size('small') {
+        font-size: $nimbus-size-s;
+        line-height: $line-height-s;
+      }
+    }
+  }
 }
 
 h1 {
   font-size: $hobo-size-m;
   line-height: $line-height-m;
   text-shadow: $fab-inverse;
+}
+
+h2 {
+  font-family: $display-hobo;
+  font-size: $hobo-size-m;
+  line-height: $line-height-m;
+  @include screen-size('small') {
+    font-size: $hobo-size;
+    line-height: $line-height;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h5 {
+  &.fab {
+    color: $main-color;
+    background-color: $background-color;
+    text-shadow: $fab-inverse;
+    // box-shadow: $fab-inverse;
+    &.white {
+      background-color: white !important;
+    }
+  }
+}
+
+li, a {
+  &.fab {
+    color: $main-color;
+    background-color: $background-color;
+    text-shadow: $fab-inverse;
+    &.black {
+      color: $main-color !important;
+    }
+    &.white {
+      background-color: white !important;
+    }
+  }
 }
 
 .nimbus {
@@ -49,7 +127,7 @@ h1 {
     font-size: $nimbus-size-l;
     line-height: $line-height-l;
   }
-  @include screen-size('small') {
+  @include screen-size('medium') {
     &.m {
       font-size: $nimbus-size;
       line-height: $line-height;
@@ -73,7 +151,7 @@ h1 {
       font-size: $hobo-size-l;
       line-height: $line-height-l;
     }
-    @include screen-size('small') {
+    @include screen-size('medium') {
       &.m {
         font-size: $hobo-size;
         line-height: $line-height;

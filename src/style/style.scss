@@ -32,6 +32,8 @@
 // New Parts
 //
 
+@import 'parts/enter';
+@import 'parts/glow';
 @import 'helpers/widget';
 
 //
@@ -56,6 +58,8 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/main';
+
+@import 'parts/single';
 
 
 //

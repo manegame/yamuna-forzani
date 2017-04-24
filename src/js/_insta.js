@@ -1,3 +1,8 @@
+openWithInsta = function (event) {
+	event.preventDefault();
+	open("instagram://user?username=yamunaforzani")
+}
+
 instaShow = function(event) {
 
 	$('#insta-text').css({
@@ -6,6 +11,10 @@ instaShow = function(event) {
   	});
 
 	if ( $(window).width() > 768 && event.pageX <  100){
+
+		if(!$('glow').hasClass('small')) {
+			$('.glow').addClass('small');
+		}
 
 		$('#insta-text').css({'left' : '20px'}).fadeIn(500);
 		$('#instagram').removeClass('blue mint').addClass('pink').fadeIn(500);
